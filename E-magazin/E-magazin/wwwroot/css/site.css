@@ -1,0 +1,89 @@
+.slick-slide{
+    height:auto;
+}
+
+
+
+.rowAsni{
+    display:flex;
+    justify-content:center;
+}
+
+.crb {
+    background-color: #e73918;
+    color: white;
+}
+
+.log-btn {
+    background-color: #e73918;
+    color: white;
+    margin-top: 20px;
+    border: 1px solid #e73918;
+    border-radius:8px;
+    width:100px;
+    height:35px;
+}
+    .log-btn:hover {
+        background-color: #e64222;
+    }
+
+.reg-btn {
+    background-color: #e73918;
+    color: white;
+    margin-top: 20px;
+    border: 1px solid #e73918;
+    border-radius: 8px;
+    width: 200px;
+    height: 35px;
+}
+
+.reg-btn:hover {
+    background-color: #e64222;
+}
+
+.nav-link{
+    color:white;
+    text-decoration:none;
+}
+
+.nav-link:hover{
+    color:lightgray;
+    text-decoration:none;
+}
+
+
+.adminBtn {
+    background-color: #e73918;
+    color: white;
+    height: 40px;
+}
+
+.adminPanel {
+    margin-bottom: 420px;
+}
+
+.adminOperations {
+    display: flex;
+    justify-content: center;
+}
+
+    .adminOperations a {
+        margin: 20px
+    }
+
+.adminHeading {
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+    margin-bottom: 50px;
+}
+
+.category-name {
+    font-size: 25px;
+    color: black;
+}
+
+.table{
+    width:60%;
+    margin-left:400px
+}

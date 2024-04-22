@@ -1,0 +1,73 @@
+﻿@using E_magazin.ViewModels
+@model ProductDetailsViewModel
+
+@{
+    ViewData["Title"] = @Model.Name;
+}
+
+<!--Hero Section-->
+<div class="hero-section hero-background">
+    <h1 class="page-title"></h1>
+</div>
+
+<br />
+<br />
+
+<div class="page-contain single-product">
+
+    <div class="container">
+
+        <!-- Main content -->
+        <div id="main-content" class="main-content">
+
+            <!-- summary info -->
+            <div class="sumary-product single-layout">
+                <div class="media">
+                    <ul class="biolife-carousel slider-for" data-slick='{"arrows":false,"dots":false,"slidesMargin":30,"slidesToShow":1,"slidesToScroll":1,"fade":true,"asNavFor":".slider-nav"}'>
+                        <li><img src="@Model.ImageUrl" alt="" width="500" height="500"></li>
+                    </ul>
+                </div>
+                <div class="product-attribute" style="margin-left:200px;">
+                    <h3 class="title">@Model.Name</h3>
+                    <div class="rating">
+                        <b class="category">Категория: @Model.CategoryName</b>
+                    </div>
+                    <span class="sku">Мерна единица: @Model.UnitOfMeasure.Name</span>
+                    <br>
+
+                    <span class="sku">Производител: @Model.Manufacturer.Name</span>
+                    <p class="excerpt">Описание: @Model.Description</p>
+                    <div class="price">
+                        <ins><span class="price-amount">@string.Format("{0:C}", Model.SellingPrice)</span></ins>
+                    </div>
+                    <span class="sku">Налично количество: @Model.Amount</span>
+                    <br>
+                    @if (Model.IsSoldOut)
+                    {
+                        <div class="action-form" style="background-color:white; border-top:none; padding-left:0px;">
+                            <div class="buttons external-btn">
+                                <a class="btn add-to-cart-btn" style="pointer-events: none; background-color:#e87761">Няма наличност</a>
+                            </div>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="action-form" style="background-color:white; border-top:none; padding-left:0px;">
+                            <div class="buttons external-btn">
+                                <a asp-area="" asp-controller="Product" asp-action="BuyProduct" asp-route-id="@Model.Id" class="btn add-to-cart-btn">Купи продукт</a>
+                            </div>
+                        </div>
+                    }
+
+                    @if (User.IsInRole("Administrator"))
+                    {
+                        <div class="operationBtns">
+                            <a class="btn btn-success" asp-area="Admin" asp-controller="Admin" asp-action="EditProduct" asp-route-id="@Model.Id">Редактирай</a>
+                            <a class="btn btn-danger" asp-area="Admin" asp-controller="Admin" asp-action="DeleteProduct" asp-route-id="@Model.Id">Изтрий</a>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Опции на ръководителя";
+}
+
+<div class="adminPanel">
+    <h1 class="adminHeading">Опции на админа</h1>
+    <div class="adminOperations">
+        <a asp-area="Admin" asp-controller="Admin" asp-action="AddProduct" class="adminBtn btn">Добави продукт</a>
+        <a asp-area="Admin" asp-controller="Admin" asp-action="RestockProduct" class="adminBtn btn">Зареди продукт</a>
+        <a asp-area="Admin" asp-controller="Admin" asp-action="AddCategory" class="adminBtn btn">Добави категория</a>
+        <a asp-area="Admin" asp-controller="Admin" asp-action="CategoryList" class="adminBtn btn">Лист с категории</a>
+    </div>
+</div>
+<h3 style="position:relative; bottom:300px; display:flex; justify-content:center;">Каса на магазина: @Model.TotalSum.ToString("C2")</h3>

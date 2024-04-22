@@ -1,0 +1,90 @@
+﻿
+@{
+    ViewData["Title"] = "Е-магазин";
+}
+
+
+<div class="page-contain">
+
+    <!-- Main content -->
+    <div id="main-content" class="main-content">
+
+        <!--Block 01: Main slide-->
+        <div class="main-slide block-slider">
+            <ul class="biolife-carousel nav-none-on-mobile" data-slick='{"arrows": true, "dots": false, "slidesMargin": 0, "slidesToShow": 1, "infinite": true, "speed": 800}'>
+                <li>
+                    <div class="slide-contain slider-opt03__layout01">
+                        <div class="media">
+                            <div class="child-elememt">
+                                <a href="#" class="link-to">
+                                    <img src="~/images/home-03/slide-01-child-01.png" width="604" height="580" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="text-content">
+                            <h3 class="second-line">100% Органични</h3>
+                            <p class="third-line">Прясно изцедени плодове и зеленчуци</p>
+                            <p class="buttons">
+                                <a asp-action="Products" asp-controller="Product" class="btn btn-bold">Разгледай продуктите ни</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="slide-contain slider-opt03__layout01">
+                        <div class="media">
+                            <div class="child-elememt"><a asp-action="Products" asp-controller="Product" class="link-to"><img src="~/images/home-03/slide-01-child-01.png" width="604" height="580" alt=""></a></div>
+                        </div>
+                        <div class="text-content">
+                            <i class="first-line">Pomegranate</i>
+                            <h3 class="second-line">Vegetables 100% Organic</h3>
+                            <p class="third-line">A blend of freshly squeezed green apple & fruits</p>
+                            <p class="buttons">
+                                <a href="#" class="btn btn-bold">Shop now</a>
+                                <a href="#" class="btn btn-thin">View lookbook</a>
+                            </p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <div class="special-slide">
+            <div class="container">
+                <div class="biolife-service type01 biolife-service__type01 sm-margin-top-0 xs-margin-top-45px">
+                    <b class="txt-show-01">100%Nature</b>
+                    <i class="txt-show-02">Свежи плодове</i>
+                </div>
+            </div>
+        </div>
+
+
+        <!--Block 03: Product Tab-->
+        <div class="product-tab z-index-20 sm-margin-top-193px xs-margin-top-30px">
+            <div class="container">
+                <div class="biolife-title-box">
+                    <span class="subtitle">Само най-добрите продукти за ТЕБ</span>
+                </div>
+            </div>
+        </div>
+
+        <!--Block 05: Banner Promotion 02-->
+        <div class="banner-promotion-02 z-index-20">
+            <div class="biolife-banner promotion2 biolife-banner__promotion2">
+                <div class="banner-contain">
+                    <div class="container">
+                        <div class="media"></div>
+                        <div class="text-content">
+                            <b class="first-line">Гладна мечка, </b>
+                            <span class="second-line">хоро не играе!</span>
+                            <p class="third-line">Живеейки по-близо до природата и практикувайки вегетариански хранителен режим, последователите на адвентистите от седмия ден, надживяват своите съседи със средно между 4 до 7 години.</p>
+                            <p class="buttons">
+                                <a href="#" class="btn btn-bold">За нас</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

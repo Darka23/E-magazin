@@ -1,0 +1,35 @@
+﻿@model IEnumerable<E_magazin.Data.Models.Category>
+
+@{
+    ViewData["Title"] = "Лист с категории";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div style="margin-left:850px;">
+<h2>Лист с катергории</h2>
+<a asp-action="AddCategory" asp-controller="Admin" asp-area="Admin" class="btn btn-primary" style="margin-left:50px; margin-bottom:60px; margin-top:20px;">Добави нова</a>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th >
+                Име
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td class="category-name">
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-action="EditCategory" asp-controller="Admin" asp-area="Admin" asp-route-id="@item.Id" class="btn btn-success">Редактирай</a> 
+                <a asp-action="DeleteCategory" asp-controller="Admin" asp-area="Admin" asp-route-id="@item.Id" class="btn btn-danger">Изтрий</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

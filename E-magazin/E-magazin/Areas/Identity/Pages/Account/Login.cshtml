@@ -1,0 +1,40 @@
+﻿@page
+@model LoginModel
+
+@{
+    ViewData["Title"] = "Влез в профила си";
+}
+
+<h1 class="rowAsni">@ViewData["Title"]</h1>
+<div class="rowAsni">
+    <div class="col-md-4">
+        <section>
+            <form id="account" method="post">
+                <hr />
+                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                <div class="form-floating">
+                    <label>Потребителско име</label>
+                    <input asp-for="Input.Email" class="form-control" autocomplete="username" aria-required="true" placeholder="Потребителско име"/>
+                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+                </div>
+                <div style="margin-top:15px" class="form-floating">
+                    <label>Парола</label>
+                    <input asp-for="Input.Password" class="form-control" autocomplete="current-password" aria-required="true" placeholder="Парола"/>
+                    <span asp-validation-for="Input.Password" class="text-danger"></span>
+                </div>
+                <div style="margin-bottom:180px;">
+                    <button id="login-submit" type="submit" class="log-btn">Влез</button>
+                    <button asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="btn btn-primary" style="border-radius:8px;">Създай нов акаунт</button>
+                </div>
+                <div>
+                    <p>
+                    </p>
+                </div>
+            </form>
+        </section>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

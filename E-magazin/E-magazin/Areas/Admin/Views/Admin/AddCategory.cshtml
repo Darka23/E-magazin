@@ -1,0 +1,34 @@
+﻿@model E_magazin.Data.Models.Category
+
+@{
+    ViewData["Title"] = "AddCategory";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="rowAsni">Добави категория</h2>
+
+<div class="rowAsni" style="margin-bottom:100px; margin-top:50px;">
+    <div class="col-md-4">
+        <form asp-action="AddCategory">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label">Име</label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Добави" class="btn btn-danger crb" />
+                <a asp-action="AdminPanel" class="btn btn-primary">Обратно към Админ панела</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
